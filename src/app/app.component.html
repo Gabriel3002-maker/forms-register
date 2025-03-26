@@ -1,0 +1,37 @@
+
+<div class="mt-3">
+  <form [formGroup]="formGroup" class="card flex justify-center">
+    <p-select formControlName="selectedCity" 
+              [options]="rols" 
+              optionLabel="name" 
+              placeholder="Por favor Seleccione" 
+              class="w-full md:w-56" 
+              (onChange)="onCityChange()">
+    </p-select>
+  </form>
+</div>
+
+<div *ngIf="dynamicFormGroup">
+  <form [formGroup]="dynamicFormGroup" class="card flex justify-center">
+    <!--Pymes-->
+    <div *ngIf="selectedCity === 'PY'">
+      <app-register-pymes></app-register-pymes>
+    </div>
+
+    <!--Carries-->
+    <div *ngIf="selectedCity === 'CA'">
+      <app-register-carries></app-register-carries>
+    </div>
+
+    <!--Producers-->
+    <div  *ngIf="selectedCity === 'PR'">
+      <app-register-producers></app-register-producers>
+    </div>
+
+    <!--Factory-->
+    <div *ngIf="selectedCity === 'PP'">
+      <app-register-factory></app-register-factory>
+    </div>
+   
+  </form>
+</div>

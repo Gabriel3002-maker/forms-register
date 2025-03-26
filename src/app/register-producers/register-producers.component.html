@@ -1,0 +1,315 @@
+<div class="card">
+    <!-- Componente de pasos de navegación -->
+    <p-steps [activeIndex]="active" [model]="items"></p-steps>
+  
+    <!-- Paso 1: Información General de la Empresa o Profesional -->
+    <form [formGroup]="formStep1" class="space-y-6">
+      <div *ngIf="active === 0">
+        <div class="flex justify-center">
+          <h3>Información General de la Empresa o Profesional</h3>
+        </div>
+  
+        <div class="grid grid-cols-3 space-x-2 space-y-2">
+          <!-- Nombre Comercial o Nombre del Profesional -->
+          <div class="p-field">
+            <label for="comercialName" class="block text-sm font-medium text-gray-700">Nombre Comercial </label>
+            <input id="comercialName" type="text" pInputText formControlName="comercialName"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+  
+          <!-- Razón Social -->
+          <div class="p-field">
+            <label for="socialRazon" class="block text-sm font-medium text-gray-700">Razón Social</label>
+            <input id="socialRazon" type="text" pInputText formControlName="socialRazon"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+
+          <!-- Año de Fundacion-->
+          <div class="p-field">
+            <label for="foundation_year" class="block text-sm font-medium text-gray-700">Año de Fundacion:</label>
+            <input id="foundation_year" type="text" pInputText formControlName="foundation_year"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+  
+  
+          <!-- Tipo de Productor -->
+          <div class="p-field">
+            <label for="producer_type" class="block text-sm font-medium text-gray-700">Tipo de Productor:</label>
+            <input id="producer_type" type="text" pInputText formControlName="producer_type"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+
+                <!--Nro Empleoados-->
+            <div class="p-field">
+                <label class="block text-sm font-medium text-gray-700">Nro de Empleados:</label>
+                <div class="mt-2 space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <input id="primer" type="checkbox" pCheckbox formControlName="nroEmployeeActivity"
+                            value="primer" />
+                        <label for="primer" class="text-sm">1 - 10</label>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <input id="segundo" type="checkbox" pCheckbox formControlName="nroEmployeeActivity"
+                            value="segundo" />
+                        <label for="segundo" class="text-sm">10 - 50</label>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <input id="tercer" type="checkbox" pCheckbox formControlName="nroEmployeeActivity"
+                            value="tercer" />
+                        <label for="tercer" class="text-sm">50 - 100</label>
+                    </div>
+                </div>
+            </div>
+
+  
+        </div>
+  
+        <div class="grid grid-cols-3 space-x-2 space-y-2">
+          <!-- Nombre del Representante -->
+          <div class="p-field">
+            <label for="representName" class="block text-sm font-medium text-gray-700">Nombre del Representante:</label>
+            <input id="representName" type="text" pInputText formControlName="representName"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+  
+  
+          <!--Cargo -->
+          <div class="p-field">
+            <label for="charge" class="block text-sm font-medium text-gray-700">Cargo:</label>
+            <input id="charge" type="text" pInputText formControlName="charge"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+  
+
+          <!-- Numero de Identificacion -->
+          <div class="p-field">
+            <label for="numberIdentification" class="block text-sm font-medium text-gray-700">Numero de Identificacion:</label>
+            <input id="numberIdentification" type="text" pInputText formControlName="numberIdentification"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+  
+  
+          <!-- Email -->
+          <div class="p-field">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+            <input id="email" type="text" pInputText formControlName="email"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+  
+  
+          <!-- Telefono -->
+          <div class="p-field">
+            <label for="phone" class="block text-sm font-medium text-gray-700">Telefono:</label>
+            <input id="phone" type="text" pInputText formControlName="phone"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+  
+  
+          <!-- Nombre Direccion -->
+          <div class="p-field">
+            <label for="nameDirection" class="block text-sm font-medium text-gray-700">Direccion:</label>
+            <input id="nameDirection" type="text" pInputText formControlName="nameDirection"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+  
+  
+          <!-- Pais -->
+          <div class="p-field">
+            <label for="country" class="block text-sm font-medium text-gray-700">Pais:</label>
+            <input id="country" type="text" pInputText formControlName="country"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+  
+          <!-- Ciudad -->
+          <div class="p-field">
+            <label for="city" class="block text-sm font-medium text-gray-700">Ciudad:</label>
+            <input id="city" type="text" pInputText formControlName="city"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+
+
+          <!--WebSite -->
+          <div class="p-field">
+            <label for="website" class="block text-sm font-medium text-gray-700">Sitio Web:</label>
+            <input id="website" type="text" pInputText formControlName="website"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+  
+          <!--Social Facebook -->
+          <div class="p-field">
+            <label for="social_facebook" class="block text-sm font-medium text-gray-700">Facebook:</label>
+            <input id="social_facebook" type="text" pInputText formControlName="social_facebook"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+
+
+          <!--Social Instagram -->
+          <div class="p-field">
+            <label for="social_instagram" class="block text-sm font-medium text-gray-700">Instagram:</label>
+            <input id="social_instagram" type="text" pInputText formControlName="social_instagram"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+
+
+          <!--Social Linkedin -->
+          <div class="p-field">
+            <label for="social_linkedin" class="block text-sm font-medium text-gray-700">Linkedin:</label>
+            <input id="social_linkedin" type="text" pInputText formControlName="social_linkedin"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+  
+        </div>
+  
+  
+  
+        <div class="flex justify-items-start mt-2">
+          <!-- Botón de Siguiente -->
+          <button pButton type="button" label="Siguiente" [disabled]="!isSection1Valid()" (click)="goToStep(1)"
+            class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:opacity-50">
+          </button>
+        </div>
+  
+  
+      </div>
+  
+      <!-- Paso 2: Datos del Vehiculo -->
+      <div *ngIf="active === 1">
+        <div class="flex justify-items-start">
+          <h3>Datos del Vehiculo</h3>
+        </div>
+  
+        <div class="grid grid-cols-2 space-x-2">
+          <!-- Descripcion del Producto -->
+          <div class="p-field">
+            <label for="productsDescription" class="block text-sm font-medium text-gray-700">Descripcion del Producto</label>
+            <input id="productsDescription" type="text" pInputText formControlName="productsDescription"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+  
+          <!-- Area Geografica  -->
+          <div class="p-field">
+            <label for="areaGeographics" class="block text-sm font-medium text-gray-700">Area Geografica:</label>
+            <input id="areaGeographics" type="text" pInputText formControlName="areaGeographics"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+
+           <!-- Capacidad de Produccion  -->
+           <div class="p-field">
+            <label for="capacityProduction" class="block text-sm font-medium text-gray-700">Capacidad de Produccion:</label>
+            <input id="capacityProduction" type="text" pInputText formControlName="capacityProduction"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" />
+          </div>
+  
+        </div>
+
+        <div class="flex justify-items-start space-x-2">
+            <h3>Documentacion del Representante:</h3>
+          </div>
+    
+          <div class="grid grid-cols-2 ">
+            <!-- Documento de Identificacion del Representante Legal -->
+            <div class="p-field">
+              <label for="documentIdentificationRepresentLegal" class="block text-sm font-medium text-gray-700">Documento
+                de Identificacion del Representante Legal:</label>
+                <input id="documentIdentificationRepresentLegal" type="file" (change)="onFileSelected($event, 'documentIdentificationRepresentLegal')"
+                class="mt-1 block w-full p-2 border border-gray-300 rounded-md" accept=".pdf,.jpg,.png" />
+            </div>
+    
+            <!-- Documento NIT o RUC -->
+            <div class="p-field">
+              <label for="documentNITorRUC" class="block text-sm font-medium text-gray-700">Documento NIT o RUC:</label>
+              <input id="documentNITorRUC" type="file" (change)="onFileSelected($event, 'documentNITorRUC')"
+                class="mt-1 block w-full p-2 border border-gray-300 rounded-md" accept=".pdf,.jpg,.png" />
+            </div>
+
+              <!-- Documento Legal de Certificacion -->
+              <div class="p-field">
+                <label for="documentLegalCertification" class="block text-sm font-medium text-gray-700">Documento Legal de Certificacion:</label>
+                <input id="documentLegalCertification" type="file" (change)="onFileSelected($event, 'documentLegalCertification')"
+                  class="mt-1 block w-full p-2 border border-gray-300 rounded-md" accept=".pdf,.jpg,.png" />
+              </div>
+
+
+                <!-- Certificacion de Existencia -->
+            <div class="p-field">
+                <label for="certificationExistencia" class="block text-sm font-medium text-gray-700">Certificacion de Existencia:</label>
+                <input id="certificationExistencia" type="file" (change)="onFileSelected($event, 'certificationExistencia')"
+                  class="mt-1 block w-full p-2 border border-gray-300 rounded-md" accept=".pdf,.jpg,.png" />
+              </div>
+
+          </div>
+  
+  
+        <div class="grid grid-cols-2 space-x-2">
+        
+
+            <!-- Certificacion de Calidad -->
+            <div class="p-field">
+                <label for="certificationQuality" class="block text-sm font-medium text-gray-700">Certificacion de Calidad:</label>
+                <input id="certificationQuality" type="file" (change)="onFileSelected($event, 'certificationQuality')"
+                  class="mt-1 block w-full p-2 border border-gray-300 rounded-md" accept=".pdf,.jpg,.png" />
+              </div>
+        
+  
+          <!-- Licencia de Operación -->
+          <div class="p-field">
+            <label for="licenseOperation" class="block text-sm font-medium text-gray-700">
+              Licencia de Operación:
+            </label>
+            <input id="licenseOperation" type="file" (change)="onFileSelected($event, 'licenseOperation')"
+              class="mt-1 block w-full p-2 border border-gray-300 rounded-md" accept=".pdf,.jpg,.png" />
+          </div>
+  
+  
+  
+        </div>
+  
+
+  
+        <div class="grid grid-cols-2 mt-2 ">
+          <!--Consentimiento de Privacidad-->
+          <div class="p-field">
+            <label class="block text-sm font-medium text-gray-700">Consentimiento de
+              Politicas de Privacidad:</label>
+            <div class="mt-2 space-y-2">
+              <div class="flex items-center space-x-2">
+                <input id="consent_privacy_policy" type="checkbox" pCheckbox formControlName="consent_privacy_policy"
+                  value="consent_privacy_policy" />
+                <label for="consent_privacy_policy" class="text-sm">Consentimiento de Privacidad</label>
+              </div>
+            </div>
+          </div>
+  
+          <!--Terminos y Condiciones-->
+          <div class="p-field">
+            <label for="consent_terms_conditions" class="block text-sm font-medium text-gray-700">Terminos y
+              Condiciones:</label>
+  
+            <input id="consent_terms_conditions" type="checkbox" pCheckbox formControlName="consent_terms_conditions"
+              value="consent_terms_conditions" />
+            <label for="consent_terms_conditions" class="text-sm">Acepta los Terminos de Privacidad</label>
+          </div>
+  
+        </div>
+  
+        <div class="grid grid-cols-3">
+          <!--Firma-->
+          <div class="p-field">
+            <label for="signal" class="block text-sm font-medium text-gray-700">Firma:</label>
+            <input id="signal" type="file" (change)="onFileSelected($event, 'signal')"
+            class="mt-1 block w-full p-2 border border-gray-300 rounded-md" accept=".pdf,.jpg,.png" />
+          </div>
+  
+        </div>
+  
+        <div class="flex justify-items-start mt-2">
+          <!-- Botón de Siguiente -->
+          <button pButton type="button" label="Enviar" (click)="onSubmit()"
+            class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 disabled:opacity-50">
+          </button>
+        </div>
+      </div>
+  
+    </form>
+  
+  </div>

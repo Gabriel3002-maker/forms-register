@@ -1,0 +1,34 @@
+{
+   "params": {
+        "comercialName": "Elvis",
+        "socialRazon": "Elvis Razon social",
+        "foundation_year": 1990,
+        "processing_type": "fruit_vegetable_transformation",
+        "nroEmployeeActivity": "1_10",
+        "representName": "tes",
+        "charge": "cargo",
+        "numberIdentification": "343",
+        "email": "elvispaez18@gmail.com",
+        "phone": "34543453",
+        "nameDirection": "Drecdcdcdc",
+        "city": "Ciudad",
+        "country": "El Salvador",
+        "website": "",
+        "social_facebook": "face",
+        "social_instagram": "ins",
+        "social_linkedin": "link",
+        
+        "productsDescription": "asdada",
+        "areaGeographics": "asdadsa",
+        "capacityProduction": "Capacidad",
+        "documentIdentificationRepresentLegal": null,
+        "documentNITorRUC": null,
+        "documentLegalCertification": null,
+        "certificationExistencia": null,
+        "certificationQuality": null,
+        "licenseOperation": null,
+        "consent_privacy_policy": false,
+        "consent_terms_conditions": true,
+        "signal": null
+    }
+}

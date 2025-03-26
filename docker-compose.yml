@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  canaanfront:
+    container_name: canaanfront
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 4042:4042
+    volumes:
+      - .:/usr/local/app
+    restart: always
